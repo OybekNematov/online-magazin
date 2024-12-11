@@ -17,6 +17,10 @@ const ProductDetails = () => {
 
   const disabled = cart.some((product) => product.id == id);
 
+<<<<<<< HEAD
+=======
+  // if product is not found
+>>>>>>> 3f654333450f4e45ca6a394645165f884793dde3
   if (isLoading) {
     return (
       <section className='h-screen flex justify-center items-center'>
