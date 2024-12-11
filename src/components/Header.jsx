@@ -4,7 +4,7 @@ import { ShoppingBag } from "lucide-react";
 import logo from "../assets/icons/logo.svg";
 import { useCart } from "../contexts/CartContext";
 
-const Header = ({handleSidebarOpen}) => {
+const Header = ({ handleSidebarOpen }) => {
   const [isActive, setIsActive] = useState(false);
 
   const { cart } = useCart();
@@ -13,7 +13,7 @@ const Header = ({handleSidebarOpen}) => {
     function watchScroll() {
       window.scrollY > 60 ? setIsActive(true) : setIsActive(false);
     }
-    
+
     window.addEventListener("scroll", function () {
       window.scrollY > 60 ? setIsActive(true) : setIsActive(false);
     });
@@ -34,7 +34,7 @@ const Header = ({handleSidebarOpen}) => {
           </a>
         </div>
 
-        <button className='relative'>
+        <button className='relative sidebar-btn'>
           <ShoppingBag className='w-7 h-7' onClick={handleSidebarOpen} />
           <span className='absolute -bottom-1 -right-1 text-xs bg-red-500 text-white rounded-full min-w-4'>
             {cart.length}
